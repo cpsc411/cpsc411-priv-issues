@@ -36,13 +36,11 @@ jobs:
     - name: Install dependencies
       run: |
         raco pkg install --batch --auto \
-          https://github.com/cpsc411/cpsc411-pub.git?path=cpsc411-lib#2020w2 \
-          ./compilers2.0/cpsc411-priv/cpsc411-reference-tests \
-          ./compilers2.0/cpsc411-priv/cpsc411-reference-lib \
+          https://github.com/cpsc411/cpsc411-pub.git?path=cpsc411-lib#2020w2
     - name: Build tests
       run: |
          raco pkg install --batch --auto \
-          ./compilers2.0/cpsc411-priv/cpsc411-reference-tests \
+          ./compilers2.0/cpsc411-priv/cpsc411-reference-tests
     - name: Test tests
       run: |
         raco test -p cpsc411-reference-tests
@@ -52,7 +50,7 @@ jobs:
     - name: Build lib
       run: |
          raco pkg install --batch --auto \
-          ./compilers2.0/cpsc411-priv/cpsc411-reference-lib \
+          ./compilers2.0/cpsc411-priv/cpsc411-reference-lib
     - name: Test lib
       run: |
         raco test -p cpsc411-reference-lib
@@ -62,7 +60,7 @@ jobs:
     - name: Build doc
       run: |
          raco pkg install --batch --auto \
-          ./compilers2.0/cpsc411-priv/cpsc411-reference-doc \
+          ./compilers2.0/cpsc411-priv/cpsc411-reference-doc
     - name: Test doc
       run: |
         raco test -p cpsc411-reference-doc
